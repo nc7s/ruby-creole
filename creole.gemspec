@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/minad/creole'
   s.license  = 'Ruby'
   
-  s.add_development_dependency('bacon')
+  s.add_development_dependency('rspec')
   s.add_development_dependency('rake')
 end

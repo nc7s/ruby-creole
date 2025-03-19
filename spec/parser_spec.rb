@@ -1,16 +1,14 @@
 require 'creole'
 
-class Bacon::Context
+describe Creole::Parser do
   def tc(html, creole, options = {})
-    Creole.creolize(creole, options).should.equal html
+    expect(Creole.creolize(creole, options)).to eq html
   end
 
   def tce(html, creole)
     tc(html, creole, :extensions => true)
   end
-end
 
-describe Creole::Parser do
   it 'should parse bold' do
     # Creole1.0: Bold can be used inside paragraphs
     tc "<p>This <strong>is</strong> bold</p>", "This **is** bold"
